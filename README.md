@@ -22,17 +22,8 @@ Esto permite:
 - Bajo acoplamiento y alta cohesión
 - Reemplazar cualquier dependencia (ej. base de datos real en lugar de mock) sin tocar la lógica central
 
----
 
-## 🧱 Arquitectura general
-
-```txt
-┌────────────┐       ┌──────────────────────┐       ┌────────────────────┐
-│  Client /  │ <---> │ Wallet Service (API) │ <---> │ Repositorio (Mock) │
-│  Postman   │       │                      │       │ (DB Simulada)      │
-└────────────┘       └──────────────────────┘       └────────────────────┘ ```
-
-📦 Otros servicios del ecosistema :
+## 📦 Otros servicios del ecosistema :
 
 user-service
 
@@ -42,7 +33,7 @@ notification-service
 
 proto/ (pensado para definir contratos entre servicios)
 
-⚙️ Stack técnico
+## ⚙️ Stack técnico
 
 🐹 Golang 1.20+
 
@@ -54,7 +45,7 @@ proto/ (pensado para definir contratos entre servicios)
 
 💾 PostgreSQL simulado (con posibilidad de real integración)
 
-📂 Estructura del proyecto
+## 📂 Estructura del proyecto
 
 wallet-service/
 ├── cmd/
@@ -72,14 +63,14 @@ wallet-service/
 └── README.md 
 
 
-📬 Endpoints disponibles
+## 📬 Endpoints disponibles
 
 POST	/wallets	                   Crear una billetera
 GET	    /wallets/{userID}	           Obtener saldo de usuario
 POST	/wallets/{userID}/deposit	   Realizar un depósito
 POST	/wallets/{userID}/withdraw	   Realizar un retiro
 
-🔍 Ejemplos de uso (simulado con Postman)
+## 🔍 Ejemplos de uso (simulado con Postman)
 
 📥 Crear billetera
 
@@ -124,7 +115,7 @@ Casos probados:
 
 ✅ Manejo de errores: saldo insuficiente, billetera inexistente
 
-📄 Dockerfile
+## 📄 Dockerfile
 FROM golang:1.20
 
 WORKDIR /app
@@ -138,7 +129,7 @@ EXPOSE 8080
 CMD ["./wallet-service"]
 
 
-🧰 Configuración del entorno
+##🧰 Configuración del entorno
 Aunque no se utiliza en esta versión, el sistema puede incorporar variables de entorno:
 PORT=8080
 DB_URL=localhost
@@ -154,7 +145,7 @@ Esta API REST está documentada en formato OpenAPI v3:
 Incluye endpoints para crear billeteras, consultar saldo, depositar y retirar.
 
 
-🧠 Posibles mejoras / extensiones
+## 🧠 Posibles mejoras / extensiones
 
 ✔️ Implementar una base de datos real (PostgreSQL, MYSQL)
 ✔️ Crear pruebas de integración y mocks con interfaces
@@ -163,11 +154,11 @@ Incluye endpoints para crear billeteras, consultar saldo, depositar y retirar.
 ✔️ Documentar con Swagger / OpenAPI
 ✔️ Deploy en Docker Compose / Kubernetes
 
-🧑‍💻 Autora
+##  Autora
 Desarrollado por @HuilenVilches 🤓 (aka SpookyCoincidence 🕸️🕷️)
 Golang Backend Developer 
 
 Este proyecto forma parte de un challenge técnico autogestionado, simulado como si fuera parte de un entorno productivo real, pero completamente desarrollado sin ejecución ni dependencias externas.
 
-📚 Licencia
+## 📚 Licencia
 MIT License © 2025 – Libre para aprender, compartir y adaptar 🚀
