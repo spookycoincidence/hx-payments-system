@@ -64,11 +64,12 @@ wallet-service/
 ```
 
 ## 📬 Endpoints disponibles
-
-POST	/wallets	                   Crear una billetera
-GET	    /wallets/{userID}	           Obtener saldo de usuario
-POST	/wallets/{userID}/deposit	   Realizar un depósito
-POST	/wallets/{userID}/withdraw	   Realizar un retiro
+```bash
+POST	  /wallets	                     Crear una billetera
+GET	    /wallets/{userID}	             Obtener saldo de usuario
+POST	  /wallets/{userID}/deposit	     Realizar un depósito
+POST	  /wallets/{userID}/withdraw	   Realizar un retiro
+```
 
 ## 🔍 Ejemplos de uso (simulado con Postman)
 
