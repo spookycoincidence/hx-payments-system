@@ -1,0 +1,126 @@
+openapi: 3.0.3
+info:
+  title: HX Payments System – Wallet Service
+  description: API REST para la gestión de billeteras virtuales en el sistema HX Payments. Permite crear wallets, consultar saldo, depositar y retirar dinero.  
+  version: 1.0.0
+  contact:
+    name: Huilen Vilches
+    url: https://github.com/spookycoincidence
+    email: spooky.dev@example.com
+
+servers:
+  - url: http://localhost:8080
+    description: Localhost (ambiente de desarrollo simulado)
+
+paths:
+  /wallets:
+    post:
+      summary: Crear una nueva billetera
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateWalletRequest'
+      responses:
+        '201':
+          description: Billetera creada exitosamente
+        '400':
+          description: Error en la solicitud
+          
+  /wallets/{user_id}:
+    get:
+      summary: Obtener el saldo de una billetera por user_id
+      parameters:
+        - in: path
+          name: user_id
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Saldo actual
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Wallet'
+        '404':
+          description: Billetera no encontrada
+
+  /wallets/{user_id}/deposit:
+    post:
+      summary: Realizar un depósito a la billetera
+      parameters:
+        - in: path
+          name: user_id
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TransactionRequest'
+      responses:
+        '200':
+          description: Depósito exitoso
+        '400':
+          description: Error en la solicitud
+        '404':
+          description: Billetera no encontrada
+
+  /wallets/{user_id}/withdraw:
+    post:
+      summary: Realizar un retiro de la billetera
+      parameters:
+        - in: path
+          name: user_id
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TransactionRequest'
+      responses:
+        '200':
+          description: Retiro exitoso
+        '400':
+          description: Fondos insuficientes o error
+        '404':
+          description: Billetera no encontrada
+
+components:
+  schemas:
+    CreateWalletRequest:
+      type: object
+      required:
+        - user_id
+      properties:
+        user_id:
+          type: integer
+          example: 1
+
+    TransactionRequest:
+      type: object
+      required:
+        - amount
+      properties:
+        amount:
+          type: number
+          format: float
+          example: 100.0
+
+    Wallet:
+      type: object
+      properties:
+        user_id:
+          type: integer
+          example: 1
+        balance:
+          type: number
+          format: float
+          example: 250.0
