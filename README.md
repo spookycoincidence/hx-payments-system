@@ -75,37 +75,55 @@ POST	  /wallets/{userID}/withdraw	   Realizar un retiro
 
 📥 Crear billetera
 
+```bash
 POST /wallets
 {
   "user_id": 1
 }
+```
+
 
 
 💰 Depositar saldo
 
+```bash
 POST /wallets/1/deposit
 {
   "amount": 100.0
 }
 
+```
 
 💸 Retirar saldo
 
+```bash
 POST /wallets/1/withdraw
 {
   "amount": 50.0
 }
 
+```
+
+
 
 📊 Consultar saldo
 
+
+```bash
 GET /wallets/1
+
+```
 
 
 🧪 Tests
 El proyecto incluye tests de unidad en la capa de service, utilizando testify y enfoque TDD:
 
+
+```bash
 go test ./test/...
+
+```
+
 
 
 Casos probados:
@@ -130,7 +148,7 @@ EXPOSE 8080
 CMD ["./wallet-service"]
 
 
-##🧰 Configuración del entorno
+## 🧰 Configuración del entorno
 Aunque no se utiliza en esta versión, el sistema puede incorporar variables de entorno:
 PORT=8080
 DB_URL=localhost
@@ -155,7 +173,7 @@ Incluye endpoints para crear billeteras, consultar saldo, depositar y retirar.
 ✔️ Documentar con Swagger / OpenAPI
 ✔️ Deploy en Docker Compose / Kubernetes
 
-##  Autora
+## 👩🏻‍💻💻 Autora
 Desarrollado por @HuilenVilches 🤓 (aka SpookyCoincidence 🕸️🕷️)
 Golang Backend Developer 
 
