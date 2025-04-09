@@ -62,21 +62,6 @@ wallet-service/
 ├── go.mod / go.sum
 └── README.md 
 ```
-wallet-service/
-├── cmd/
-│   └── main.go                # Entry point del servicio
-├── internal/
-│   ├── model/                 # Entidades de dominio (Wallet)
-│   ├── repository/            # Persistencia mockeada
-│   ├── service/               # Lógica de negocio
-│   └── transport/
-│       └── http/              # Handlers HTTP
-├── test/
-│   └── service_test.go        # Unit tests para lógica de negocio
-├── Dockerfile                 # Imagen dockerizada simulada
-├── go.mod / go.sum
-└── README.md 
-
 
 ## 📬 Endpoints disponibles
 
