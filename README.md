@@ -167,11 +167,17 @@ Incluye endpoints para crear billeteras, consultar saldo, depositar y retirar.
 ## 🧠 Posibles mejoras / extensiones
 
 ✔️ Implementar una base de datos real (PostgreSQL, MYSQL)
+
 ✔️ Crear pruebas de integración y mocks con interfaces
+
 ✔️ Agregar un API Gateway y autenticación
+
 ✔️ Implementar user-service, transaction-service, notification-service
+
 ✔️ Documentar con Swagger / OpenAPI
+
 ✔️ Deploy en Docker Compose / Kubernetes
+
 
 ## 👩🏻‍💻💻 Autora
 Desarrollado por @HuilenVilches 🤓 (aka SpookyCoincidence 🕸️🕷️)
