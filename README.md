@@ -1,4 +1,4 @@
-# 💸 HX Payments System – Wallet Service
+# 💸 HX Payments System – Wallet Service (Backend)
 
 Este microservicio es parte del ecosistema **HX Payments System**, una solución modular pensada para la gestión financiera digital.  
 En este módulo, desarrollamos el **Wallet Service**, encargado de la administración de billeteras virtuales para usuarios: creación, depósitos, retiros y consulta de saldo.
