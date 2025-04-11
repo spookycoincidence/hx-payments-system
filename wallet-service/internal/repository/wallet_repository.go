@@ -1,8 +1,8 @@
 package repository
 
 import (
-	"github.com/huilen/hx-payments-system/wallet-service/internal/db"
-	"github.com/huilen/hx-payments-system/wallet-service/internal/models"
+	"github.com/spookycoincidence/hx-payments-system/internal/db"
+	"github.com/spookycoincidence/hx-payments-system/internal/models"
 )
 
 type WalletRepository interface {

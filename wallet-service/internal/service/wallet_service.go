@@ -4,8 +4,8 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/huilen/hx-payments-system/wallet-service/internal/models"
-	"github.com/huilen/hx-payments-system/wallet-service/internal/repository"
+	"github.com/spookycoincidence/hx-payments-system/internal/models"
+	"github.com/spookycoincidence/hx-payments-system/internal/repository"
 )
 
 type WalletService interface {

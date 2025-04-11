@@ -6,7 +6,7 @@ import (
 	"strconv"
 
 	"github.com/gorilla/mux"
-	"github.com/huilen/hx-payments-system/wallet-service/internal/service"
+	"github.com/spookycoincidence/hx-payments-system/internal/service"
 )
 
 type WalletHandler struct {

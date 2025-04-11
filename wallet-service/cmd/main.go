@@ -4,11 +4,11 @@ import (
 	"log"
 
 	"github.com/gin-gonic/gin"
-	"github.com/huilen/hx-payments-system/wallet-service/internal/db"
-	"github.com/huilen/hx-payments-system/wallet-service/internal/models"
-	"github.com/huilen/hx-payments-system/wallet-service/internal/repository"
-	"github.com/huilen/hx-payments-system/wallet-service/internal/service"
-	transport "github.com/huilen/hx-payments-system/wallet-service/internal/transport/http"
+	"github.com/spookycoincidence/hx-payments-system/internal/db"
+	"github.com/spookycoincidence/hx-payments-system/internal/models"
+	"github.com/spookycoincidence/hx-payments-system/internal/repository"
+	"github.com/spookycoincidence/hx-payments-system/internal/service"
+
 	"github.com/joho/godotenv"
 )
 

@@ -3,8 +3,8 @@ package service_test
 import (
 	"testing"
 
-	"github.com/huilen/hx-payments-system/wallet-service/internal/models"
-	"github.com/huilen/hx-payments-system/wallet-service/internal/service"
+	"github.com/spookycoincidence/hx-payments-system/internal/models"
+	"github.com/spookycoincidence/hx-payments-system/internal/service"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"
 )

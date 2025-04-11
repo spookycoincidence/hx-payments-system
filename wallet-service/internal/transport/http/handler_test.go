@@ -6,7 +6,7 @@ import (
 	"testing"
 
 	"github.com/gin-gonic/gin"
-	httpHandler "github.com/huilen/hx-payments-system/wallet-service/internal/transport/http"
+	httpHandler "github.com/spookycoincidence/hx-payments-system/internal/transport/http"
 	"github.com/stretchr/testify/assert"
 )
 
